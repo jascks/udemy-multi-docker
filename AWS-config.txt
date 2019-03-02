@@ -1,0 +1,11 @@
+AWS RDS
+-------
+Instance ID: jschmidt-udemy-multi-docker-postgres
+Username: postgres
+Master password: l5K45j9rZBWm
+Database name: fibvalues
+
+AWS Elastic Cache
+-----------------
+Name: jschmidt-udemy-redis
+Subnet group: jschmidt-udemy-multi-docker-redis
