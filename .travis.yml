@@ -20,3 +20,16 @@ after_success:
   - docker push jascks/udemy-multi-nginx
   - docker push jascks/udemy-multi-server
   - docker push jascks/udemy-multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-west-2"
+  app: "jschmidt-udemy-multi-docker"
+  env: "JschmidtUdemyMultiDocker-env"
+  bucket_name: "elasticbeanstalk-us-west-2-705370621539"
+  bucket_path: "jschmidt-udemy-multi-docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY" 
